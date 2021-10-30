@@ -3,6 +3,7 @@ void main() {
   print('a1 = $a1');
 
   var b1 = a1.where((element) => true).toList();
+  var b7 = a1.removeWhere((element) => element % 2 == 0);
   var b2 = a1.firstWhere((element) => element % 2 == 0, orElse: () => 0);
   var b3 = a1.lastWhere((element) => element % 2 == 0, orElse: () => 0);
   var b4 = a1.indexWhere((element) => element % 2 == 0, 4);
