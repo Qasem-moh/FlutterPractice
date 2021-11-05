@@ -4,7 +4,9 @@ class A {
   }
 }
 
-class B extends A{}
+class B extends A {}
+
+class C {}
 
 void main() {
   var a = A();
