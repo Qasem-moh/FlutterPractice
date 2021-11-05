@@ -4,7 +4,11 @@ class A {
   }
 }
 
-class B extends A {}
+class B extends A {
+  void fun() {
+    info();
+  }
+}
 
 class C {}
 
