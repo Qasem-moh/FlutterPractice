@@ -10,6 +10,14 @@ void main() {
 
   final List a10 = ['a', 'b', 'c'];
   const List a11 = ['a', 'b', 'c'];
-  a11.add('v');
-  print(a11);
+  a10.add('v');
+  print(a10);
+  // a11.add('v');
+  // print(a11); //Error
+
+  class Final {
+    final int num1;
+    static const int num2;//Error
+    Final(this.num1); 
+  }
 }
