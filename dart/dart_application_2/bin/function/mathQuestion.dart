@@ -11,14 +11,23 @@ class MathQuestion {
 
 double getAnswer(String q) {
   print('Q//$q');
-  var answer = double.parse(stdin.readLineSync()!);
+  var answer = double.parse(stdin.readLineSync()!)??0.0;
   return answer;
 }
 
 void main() {
-  var q1 = MathQuestion(question: '3 + 5', answer: 8.0);
-  var q2 = MathQuestion(question: '1 + 1', answer: 2.0);
+  var questions = [
+    MathQuestion(question: '3 + 5', answer: 8.0),
+    MathQuestion(question: '1 + 1', answer: 2.0),
+  ];
+  for (var item in questions) {
+    var userAnswer = getAnswer(item.question);
+    print('your Answer is $userAnswer');
 
-  var userAnswer = getAnswer(q1.question);
-  print('your Answer is $userAnswer');
+    if (userAnswer == item.answer) {
+      print('correct');
+    } else {
+      print('incorrect');
+    }
+  }
 }
